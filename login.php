@@ -2,26 +2,26 @@
 // TODO: create a session to keep login variables.
 
 try {
-    /**************************************
-    * Open database connections           *
-    **************************************/
+	/**************************************
+	* Open database connections           *
+	**************************************/
 
-    // Create (connect to) SQLite database in file
-    $database = new PDO('sqlite:testshop.db');
-    // Set errormode to exceptions
-    $database->setAttribute(PDO::ATTR_ERRMODE, 
+	// Create (connect to) SQLite database in file
+	$database = new PDO('sqlite:testshop.db');
+	// Set errormode to exceptions
+	$database->setAttribute(PDO::ATTR_ERRMODE, 
 							PDO::ERRMODE_EXCEPTION);
 	
 
-    $query = "SELECT * FROM users;";    
-    $stmt = $database->query($query); // Run SQL query
+	$query = "SELECT * FROM users;";    
+	$stmt = $database->query($query); // Run SQL query
 
-    $users = $stmt->fetchAll();
+	$users = $stmt->fetchAll();
 
 }
 catch(PDOException $e) {
-    // Print PDOException message
-    echo $e->getmessage();
+	// Print PDOException message
+	echo $e->getmessage();
 }
 
 /**************************************
@@ -33,7 +33,8 @@ require('templates/header.php');
 
 ?>
 
-    <!-- Login form -->
+<main>
+	<!-- Login form -->
     <h2>Login</h2>
     <form action="?" method="post">
         <label for="email">Email</label><br>
@@ -67,6 +68,9 @@ require('templates/header.php');
             </tr>
         <?php endforeach; ?>
         </tbody>
-    </table>
-</body>
-</html>
+	</table>
+</main>
+	
+<?php
+require('templates/footer.php');
+?>

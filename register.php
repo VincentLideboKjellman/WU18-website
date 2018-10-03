@@ -68,6 +68,7 @@ if(isset($_POST['submit'])){
     echo $e->getmessage();
     }
 
+	// Refresh the page
     header('location: ?');
 }
     
@@ -79,7 +80,9 @@ $page_title = 'Register';
 require('templates/header.php');
 
 ?>
-    <h2>Register</h2>
+
+<main>
+	<h2>Register</h2>
     <form action="?" method="post">
         <label for="firstname">Firstname</label><br>
         <input type="text" name="firstname" id="firstname" required><br><br>
@@ -92,5 +95,8 @@ require('templates/header.php');
         <input type="hidden" name="action" value="register">
         <input type="submit" name="submit" value="Send">
     </form>
-</body>
-</html>
+</main>
+
+<?php
+require('templates/footer.php');
+?>

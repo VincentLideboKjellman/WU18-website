@@ -10,6 +10,7 @@ This is a common website for all members of WU18 at [Yrgo](https://yrgo.se/), al
 ## Technology that hasn't been covered in our courses that are used in this project:
 
 * [PDO](http://php.net/manual/en/book.pdo.php) - _A very secure method of connecting to databases through PHP._
+* [Bootstrap](http://getbootstrap.com/) - _A relatively sipmle CSS framework._
 
 ---
 

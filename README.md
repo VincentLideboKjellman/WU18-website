@@ -20,3 +20,7 @@ This is a common website for all members of WU18 at [Yrgo](https://yrgo.se/), al
 ___
 ## TODO:
 * Create a Register / Login system so all members of WU18 can have accounts on the site.
+
+
+## MISC:
+* https://trello.com/b/ikBcqw1s/board-with-classmate - _Who makes the coffee? Check this out!

@@ -50,7 +50,7 @@ if(isset($_POST['submit'])){
     $firstname = $user['firstname'];
     $lastname = $user['lastname'];
     $email = $user['email'];
-    $password = hash('sha256', $user['password']); // One-way encrypt through sha256
+    $password = password_hash('sha256', $user['password']); // One-way encrypt through sha256
 
     // Execute statement
     $stmt->execute();
